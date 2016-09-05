@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.0.0 http://karaf.apache.org/xmlns/features/v1.0.0">
+ <feature name="EtcdUtils" version="1.0.0" install="auto"  start-level="70">
+ 	<feature version="2.10.0">etcd4j</feature>
+ 	<bundle>mvn:org.ponder.ResourceUtils/EtcdUtils/1.0.0</bundle>
+ </feature>
+</features>

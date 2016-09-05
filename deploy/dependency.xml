@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.0.0 http://karaf.apache.org/xmlns/features/v1.0.0">
+    <feature name="jackson" version="2.7.3" install="auto"  start-level="40">
+        <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/2.7.3</bundle>
+        <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/2.7.3</bundle>
+        <bundle>mvn:com.fasterxml.jackson.core/jackson-core/2.7.3</bundle>
+        <bundle>mvn:com.fasterxml.jackson.module/jackson-module-afterburner/2.7.3</bundle>
+    </feature>
+    <feature name="netty" version="4.1.0" install="auto" start-level="40">
+        <bundle>mvn:io.netty/netty-common/4.1.0.CR3</bundle>
+        <bundle>mvn:io.netty/netty-resolver/4.1.0.CR3</bundle>
+        <bundle>mvn:io.netty/netty-handler/4.1.0.CR3</bundle>
+        <bundle>mvn:io.netty/netty-codec/4.1.0.CR3</bundle>
+        <bundle>mvn:io.netty/netty-codec-http/4.1.0.CR3</bundle>
+        <bundle>mvn:io.netty/netty-transport/4.1.0.CR3</bundle>
+        <bundle>mvn:io.netty/netty-buffer/4.1.0.CR3</bundle>
+        <bundle>mvn:io.netty/netty-transport/4.1.0.CR3</bundle>
+    </feature>
+
+    <feature name="etcd4j" version="2.10.0" install="auto" start-level="60">
+        <feature version="2.7.3">jackson</feature>
+        <feature version="4.1.0">netty</feature>
+        <bundle>mvn:org.mousio/etcd4j/2.10.0</bundle>
+    </feature>
+</features>
